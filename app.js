@@ -1,88 +1,150 @@
 var products = [
   {
-    id: 'nano',
-    name: 'XC Nano',
-    chip: 'BM1366',
-    hashrate: '500 GH/s',
-    power: '15W ±10%',
-    efficiency: '30 J/TH',
-    noise: '<25 dB',
-    size: '88 × 62 × 28 mm',
-    weight: '120g',
-    cooling: 'Cooling Silent Fan + Aluminum Heatsink',
-    psu: 'PSU USB-C 5V/3A',
-    price: '$49',
+    id: 'nerdqaxe48',
+    name: 'NerdQaxe++',
+    tagline: '4.8 TH/s Air-Cooled',
+    chip: '4×BM1370',
+    hashrate: '4.8 TH/s',
+    power: '68W ±10%',
+    efficiency: '15 J/TH',
+    noise: '<30 dB',
+    size: '200 × 150 × 180 mm',
+    weight: '~600g',
+    cooling: 'Cooling 1100RPM Ultra-Quiet Fan',
+    psu: 'PSU XT60 12VDC (Included)',
+    price: '$310',
     featured: false,
     badge: null,
-    img: 'images/nano.svg'
+    img: 'images/nerdqaxe48.png',
+    algo: 'SHA-256 (BTC/BCH/BSV)',
+    warranty: '6 months',
+    gallery: ['images/nerdqaxe48_1.png','images/nerdqaxe48_2.png','images/nerdqaxe48_3.png']
   },
   {
-    id: 'one',
-    name: 'XC One',
-    chip: 'BM1368',
-    hashrate: '1.2 TH/s',
-    power: '22W ±10%',
-    efficiency: '18 J/TH',
-    noise: '<28 dB',
-    size: '98 × 70 × 30 mm',
-    weight: '160g',
-    cooling: 'Cooling Silent Fan + Copper Heatsink',
-    psu: 'PSU USB-C PD 12V/2A',
-    price: '$89',
+    id: 'nerdqaxe6',
+    name: 'NerdQaxe++',
+    tagline: 'Rev 6.1 — 6.0 TH/s',
+    chip: '4×BM1370',
+    hashrate: '6.0 TH/s',
+    power: '123W ±10%',
+    efficiency: '20.6 J/TH',
+    noise: '<50 dB',
+    size: '170 × 160 × 105 mm',
+    weight: '~550g',
+    cooling: 'Cooling 2600RPM Fan',
+    psu: 'PSU XT30 12VDC (Included)',
+    price: '$340',
+    featured: false,
+    badge: null,
+    img: 'images/nerdqaxe6.png',
+    algo: 'SHA-256 (BTC/BCH/BSV)',
+    warranty: '6 months',
+    gallery: ['images/nerdqaxe6_1.png','images/nerdqaxe6_2.png','images/nerdqaxe6_3.png']
+  },
+  {
+    id: 'nerdqx',
+    name: 'NerdQX',
+    tagline: '8.1 TH/s',
+    chip: '4×BM1370',
+    hashrate: '8.1 TH/s',
+    power: '138W ±10%',
+    efficiency: '17 J/TH',
+    noise: '<40 dB',
+    size: '220 × 150 × 120 mm',
+    weight: '~700g',
+    cooling: 'Cooling 2500RPM Fan',
+    psu: 'PSU XT60 12VDC (Included)',
+    price: '$500',
     featured: true,
     badge: 'hot',
-    img: 'images/one.svg'
+    img: 'images/nerdqx.jpg',
+    algo: 'SHA-256 (BTC/BCH/BSV)',
+    warranty: '6 months',
+    gallery: ['images/nerdqx_1.jpg','images/nerdqx_2.jpg','images/nerdqx_3.jpg','images/nerdqx_4.jpg','images/nerdqx_5.jpg','images/nerdqx_6.jpg']
   },
   {
-    id: 'pro',
-    name: 'XC Pro',
-    chip: 'BM1370',
-    hashrate: '2.8 TH/s',
-    power: '55W ±8%',
-    efficiency: '19.6 J/TH',
-    noise: '<32 dB',
-    size: '120 × 85 × 35 mm',
-    weight: '240g',
-    cooling: 'Cooling Dual Silent Fans + Heat Pipe',
-    psu: 'PSU DC 12V/5A Adapter',
-    price: '$169',
+    id: 'nerdoctaxe12',
+    name: 'NerdOCTAXE γ',
+    tagline: 'Rev 3.1 — 12 TH/s',
+    chip: '8×BM1370',
+    hashrate: '12 TH/s',
+    power: '240W ±10%',
+    efficiency: '20 J/TH',
+    noise: '<50 dB',
+    size: '200 × 150 × 180 mm',
+    weight: '~900g',
+    cooling: 'Cooling 4×2500RPM Fans (Push-Pull)',
+    psu: 'PSU XT60 12VDC (Included)',
+    price: '$615',
     featured: false,
     badge: 'new',
-    img: 'images/pro.svg'
+    img: 'images/nerdoctaxe12.jpg',
+    algo: 'SHA-256 (BTC/BCH/BSV)',
+    warranty: '6 months',
+    gallery: ['images/nerdoctaxe12_1.jpg','images/nerdoctaxe12_2.jpg','images/nerdoctaxe12_3.jpg','images/nerdoctaxe12_4.jpg','images/nerdoctaxe12_5.jpg','images/nerdoctaxe12_6.jpg']
   },
   {
-    id: 'ultra',
-    name: 'XC Ultra',
-    chip: 'BM1372 ×1',
-    hashrate: '5.5 TH/s',
-    power: '105W ±8%',
-    efficiency: '19.1 J/TH',
-    noise: '<35 dB',
-    size: '155 × 100 × 42 mm',
-    weight: '380g',
-    cooling: 'Cooling 12cm Silent Fan + Heat Pipe + Large Fin Array',
-    psu: 'PSU DC 12V/10A Adapter',
-    price: '$289',
+    id: 'nerdoctaxe15',
+    name: 'NerdOCTAXE γ',
+    tagline: 'Rev 3.1 — 15 TH/s',
+    chip: '8×BM1370',
+    hashrate: '15 TH/s',
+    power: '250W ±10%',
+    efficiency: '16.7 J/TH',
+    noise: '<50 dB',
+    size: '200 × 150 × 180 mm',
+    weight: '~950g',
+    cooling: 'Cooling 4×2500RPM Fans (Push-Pull)',
+    psu: 'PSU XT60 12VDC (Included)',
+    price: '$670',
     featured: false,
     badge: null,
-    img: 'images/ultra.svg'
+    img: 'images/nerdoctaxe15.jpg',
+    algo: 'SHA-256 (BTC/BCH/BSV)',
+    warranty: '6 months',
+    gallery: ['images/nerdoctaxe15_1.jpg','images/nerdoctaxe15_2.jpg','images/nerdoctaxe15_3.jpg','images/nerdoctaxe15_4.jpg','images/nerdoctaxe15_5.jpg','images/nerdoctaxe15_6.jpg']
   },
   {
-    id: 'max',
-    name: 'XC Max',
-    chip: 'BM1372 ×2',
-    hashrate: '11 TH/s',
-    power: '210W ±8%',
-    efficiency: '19.1 J/TH',
-    noise: '<38 dB',
-    size: '180 × 120 × 55 mm',
-    weight: '520g',
-    cooling: 'Cooling Dual 12cm Fans + Dual Heat Pipes + Tower Fins',
-    psu: 'PSU DC 12V/20A Adapter',
+    id: 'nexusl1',
+    name: 'Nexus Miner L1',
+    tagline: '320 MH/s Scrypt Miner',
+    chip: '4×BM1491',
+    hashrate: '320 MH/s',
+    power: '70W ±10%',
+    efficiency: '4.57 J/MH',
+    noise: '<50 dB',
+    size: '170 × 160 × 105 mm',
+    weight: '~500g',
+    cooling: 'Cooling 2600RPM Fan',
+    psu: 'PSU XT30 12VDC (Included)',
     price: '$499',
     featured: false,
     badge: 'limited',
-    img: 'images/max.svg'
+    img: 'images/nexusl1.png',
+    algo: 'Scrypt (LTC/DOGE/BELLS)',
+    warranty: '6 months',
+    gallery: ['images/nexusl1_1.png','images/nexusl1_2.png','images/nexusl1_3.png','images/nexusl1_4.png','images/nexusl1_5.png','images/nexusl1_6.png','images/nexusl1_7.png']
+  },
+  {
+    id: 'nexuss1',
+    name: 'Nexus Miner S1',
+    tagline: '10.3 TH/s',
+    chip: '8×BM1370',
+    hashrate: '10.3 TH/s',
+    power: '200W ±10%',
+    efficiency: '19.4 J/TH',
+    noise: '<45 dB',
+    size: '200 × 150 × 180 mm',
+    weight: '~900g',
+    cooling: 'Cooling Dual Fan System',
+    psu: 'PSU 12VDC (Included)',
+    price: '$780',
+    featured: false,
+    badge: null,
+    img: 'images/nexuss1.png',
+    algo: 'SHA-256 (BTC/BCH/BSV)',
+    warranty: '6 months',
+    gallery: ['images/nexuss1_1.png']
   }
 ];
 
@@ -95,6 +157,7 @@ var features = [
 
 var specKeys = [
   { key: 'hashrate', labelKey: 'compareHashrate' },
+  { key: 'algo', labelKey: 'compareAlgo' },
   { key: 'chip', labelKey: 'compareChip' },
   { key: 'power', labelKey: 'comparePower' },
   { key: 'efficiency', labelKey: 'compareEfficiency' },
@@ -103,6 +166,7 @@ var specKeys = [
   { key: 'weight', labelKey: 'compareWeight' },
   { key: 'cooling', labelKey: 'compareCooling' },
   { key: 'psu', labelKey: 'comparePSU' },
+  { key: 'warranty', labelKey: 'compareWarranty' },
   { key: 'price', labelKey: 'comparePrice' }
 ];
 
@@ -120,19 +184,19 @@ function renderProducts() {
     var badgeHtml = '';
     if (p.badge && badges[p.badge]) {
       var b = badges[p.badge];
-      badgeHtml = '<span class="absolute top-3 right-3 text-xs font-bold px-2.5 py-1 rounded-full ' + b.cls + '">' + __('badge' + p.badge.charAt(0).toUpperCase() + p.badge.slice(1)) + '</span>';
+      badgeHtml = '<span class="absolute top-3 right-3 text-xs font-bold px-2.5 py-1 rounded-full ' + b.cls + ' z-10">' + __('badge' + p.badge.charAt(0).toUpperCase() + p.badge.slice(1)) + '</span>';
     }
     html +=
       '<a href="product.html?id=' + p.id + '" class="product-card bg-white rounded-2xl border border-gray-200 overflow-hidden relative flex flex-col group cursor-pointer">' +
         badgeHtml +
-        '<div class="relative overflow-hidden bg-gray-900 h-48 flex items-center justify-center">' +
-          '<img src="' + p.img + '" alt="' + p.name + '" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" />' +
+        '<div class="relative overflow-hidden bg-gray-100 h-52 flex items-center justify-center">' +
+          '<img src="' + p.img + '" alt="' + p.name + '" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />' +
         '</div>' +
         '<div class="p-5 flex-1">' +
           '<div class="flex items-center justify-between mb-3">' +
             '<div>' +
-              '<h3 class="text-lg font-bold">' + p.name + '</h3>' +
-              '<p class="text-xs text-gray-400 mt-0.5">' + __(p.id.charAt(0).toUpperCase() + p.id.slice(1)) + '</p>' +
+              '<h3 class="text-lg font-bold text-gray-900">' + p.name + '</h3>' +
+              '<p class="text-xs text-gray-400 mt-0.5">' + p.tagline + '</p>' +
             '</div>' +
             '<div class="flex items-center gap-1.5">' +
               '<span class="glow-dot"></span>' +
@@ -140,7 +204,7 @@ function renderProducts() {
             '</div>' +
           '</div>' +
           '<div class="text-2xl font-extrabold text-gray-900 mb-1">' + p.hashrate + '</div>' +
-          '<p class="text-sm text-gray-500 mb-4">' + p.power + ' · ' + p.efficiency + '</p>' +
+          '<p class="text-sm text-gray-500 mb-4">' + p.power + ' · ' + p.efficiency + ' · ' + p.algo + '</p>' +
           '<div class="space-y-2 text-sm text-gray-600">' +
             '<div class="flex justify-between"><span class="text-gray-400">' + __('chip') + '</span><span class="font-medium">' + p.chip + '</span></div>' +
             '<div class="flex justify-between"><span class="text-gray-400">' + __('noise') + '</span><span class="font-medium">' + p.noise + '</span></div>' +
@@ -167,7 +231,7 @@ function renderCompareTable() {
   var html = '<thead><tr class="border-b border-gray-200 bg-gray-50">';
   html += '<th class="px-5 py-4 text-sm font-semibold text-gray-500 sticky left-0 bg-gray-50">' + __('compareParam') + '</th>';
   products.forEach(function (p) {
-    html += '<th class="px-5 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">' + p.name + '</th>';
+    html += '<th class="px-5 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">' + p.name + '<br><span class="text-xs font-normal text-gray-400">' + p.tagline + '</span></th>';
   });
   html += '</tr></thead><tbody>';
 
@@ -211,7 +275,7 @@ function populateModelSelect() {
   selects.forEach(function (sel) {
     var html = '<option value="">' + __('formModelPlaceholder') + '</option>';
     products.forEach(function (p) {
-      html += '<option value="' + p.name + '">' + p.name + ' — ' + p.hashrate + ' (' + p.price + ')</option>';
+      html += '<option value="' + p.name + '">' + p.name + ' (' + p.tagline + ') — ' + p.price + '</option>';
     });
     sel.innerHTML = html;
   });
