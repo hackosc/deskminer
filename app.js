@@ -1,5 +1,55 @@
 var products = [
   {
+    id: 'nexuss1',
+    name: 'Nexus Miner S1',
+    tagline: 'Solo Mining ASIC — PSU Included',
+    chip: '4×BM1373',
+    hashrate: '10.3 TH/s',
+    power: '103W ±10%',
+    efficiency: '10 J/TH',
+    noise: '<50dB',
+    size: '170 × 160 × 105 mm',
+    weight: '~900g',
+    cooling: 'Cooling 2600RPM Fan',
+    psu: 'PSU XT30 12VDC (Included)',
+    price: '$780',
+    featured: false,
+    badge: null,
+    img: 'images/nexuss1.png',
+    algo: 'SHA-256 (BTC/BCH/BSV)',
+    warranty: '6 months',
+    gallery: ['images/nexuss1_1.png','images/nexuss1_2.png','images/nexuss1_3.png','images/nexuss1_4.png','images/nexuss1_5.png','images/nexuss1_6.png'],
+    desc: 'Compact ASIC miner built for home and solo mining. Powered by four next-gen BM1373 chips, delivering ~10.3 TH/s at just ~103W — an outstanding ~10 J/TH efficiency. Supports BTC, BCH, and BSV on the SHA-256 algorithm.',
+    shipping: 'Estimated shipping: end of May 2026.',
+    highlights: [
+      'Built-in ESP32-S3 WiFi for a quick, cable-free setup experience.',
+      'Designed for the home: ultra-quiet cooling, low power draw, true plug-and-play.',
+      'Fully open-source firmware — tweak, tune, and make it your own.',
+      'Backed by a 6-month limited warranty for your peace of mind.'
+    ]
+  },
+  {
+    id: 'nexusl1',
+    name: 'Nexus Miner L1',
+    tagline: '320 MH/s Scrypt Miner',
+    chip: '4×BM1491',
+    hashrate: '320 MH/s',
+    power: '70W ±10%',
+    efficiency: '4.57 J/MH',
+    noise: '<50 dB',
+    size: '170 × 160 × 105 mm',
+    weight: '~500g',
+    cooling: 'Cooling 2600RPM Fan',
+    psu: 'PSU XT30 12VDC (Included)',
+    price: '$499',
+    featured: false,
+    badge: 'limited',
+    img: 'images/nexusl1.png',
+    algo: 'Scrypt (LTC/DOGE/BELLS)',
+    warranty: '6 months',
+    gallery: ['images/nexusl1_1.png','images/nexusl1_2.png','images/nexusl1_3.png','images/nexusl1_4.png','images/nexusl1_5.png','images/nexusl1_6.png','images/nexusl1_7.png']
+  },
+  {
     id: 'nerdqaxe48',
     name: 'NerdQaxe++',
     tagline: '4.8 TH/s Air-Cooled',
@@ -64,6 +114,7 @@ var products = [
   },
   {
     id: 'nerdoctaxe12',
+    hidden: true,
     name: 'NerdOCTAXE γ',
     tagline: 'Rev 3.1 — 12 TH/s',
     chip: '8×BM1370',
@@ -85,6 +136,7 @@ var products = [
   },
   {
     id: 'nerdoctaxe15',
+    hidden: true,
     name: 'NerdOCTAXE γ',
     tagline: 'Rev 3.1 — 15 TH/s',
     chip: '8×BM1370',
@@ -103,56 +155,6 @@ var products = [
     algo: 'SHA-256 (BTC/BCH/BSV)',
     warranty: '6 months',
     gallery: ['images/nerdoctaxe15_1.jpg','images/nerdoctaxe15_2.jpg','images/nerdoctaxe15_3.jpg','images/nerdoctaxe15_4.jpg','images/nerdoctaxe15_5.jpg','images/nerdoctaxe15_6.jpg']
-  },
-  {
-    id: 'nexusl1',
-    name: 'Nexus Miner L1',
-    tagline: '320 MH/s Scrypt Miner',
-    chip: '4×BM1491',
-    hashrate: '320 MH/s',
-    power: '70W ±10%',
-    efficiency: '4.57 J/MH',
-    noise: '<50 dB',
-    size: '170 × 160 × 105 mm',
-    weight: '~500g',
-    cooling: 'Cooling 2600RPM Fan',
-    psu: 'PSU XT30 12VDC (Included)',
-    price: '$499',
-    featured: false,
-    badge: 'limited',
-    img: 'images/nexusl1.png',
-    algo: 'Scrypt (LTC/DOGE/BELLS)',
-    warranty: '6 months',
-    gallery: ['images/nexusl1_1.png','images/nexusl1_2.png','images/nexusl1_3.png','images/nexusl1_4.png','images/nexusl1_5.png','images/nexusl1_6.png','images/nexusl1_7.png']
-  },
-  {
-    id: 'nexuss1',
-    name: 'Nexus Miner S1',
-    tagline: 'Solo Mining ASIC — PSU Included',
-    chip: '4×BM1373',
-    hashrate: '10.3 TH/s',
-    power: '103W ±10%',
-    efficiency: '10 J/TH',
-    noise: '<50dB',
-    size: '170 × 160 × 105 mm',
-    weight: '~900g',
-    cooling: 'Cooling 2600RPM Fan',
-    psu: 'PSU XT30 12VDC (Included)',
-    price: '$780',
-    featured: false,
-    badge: null,
-    img: 'images/nexuss1.png',
-    algo: 'SHA-256 (BTC/BCH/BSV)',
-    warranty: '6 months',
-    gallery: ['images/nexuss1_1.png','images/nexuss1_2.png','images/nexuss1_3.png','images/nexuss1_4.png','images/nexuss1_5.png','images/nexuss1_6.png'],
-    desc: 'Compact ASIC miner built for home and solo mining. Powered by four next-gen BM1373 chips, delivering ~10.3 TH/s at just ~103W — an outstanding ~10 J/TH efficiency. Supports BTC, BCH, and BSV on the SHA-256 algorithm.',
-    shipping: 'Estimated shipping: end of May 2026.',
-    highlights: [
-      'Built-in ESP32-S3 WiFi for a quick, cable-free setup experience.',
-      'Designed for the home: ultra-quiet cooling, low power draw, true plug-and-play.',
-      'Fully open-source firmware — tweak, tune, and make it your own.',
-      'Backed by a 6-month limited warranty for your peace of mind.'
-    ]
   }
 ];
 
@@ -189,6 +191,7 @@ function renderProducts() {
   if (!grid) return;
   var html = '';
   products.forEach(function (p) {
+    if (p.hidden) return;
     var badgeHtml = '';
     if (p.badge && badges[p.badge]) {
       var b = badges[p.badge];
@@ -239,6 +242,7 @@ function renderCompareTable() {
   var html = '<thead><tr class="border-b border-gray-200 bg-gray-50">';
   html += '<th class="px-5 py-4 text-sm font-semibold text-gray-500 sticky left-0 bg-gray-50">' + __('compareParam') + '</th>';
   products.forEach(function (p) {
+    if (p.hidden) return;
     html += '<th class="px-5 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">' + p.name + '<br><span class="text-xs font-normal text-gray-400">' + p.tagline + '</span></th>';
   });
   html += '</tr></thead><tbody>';
@@ -248,6 +252,7 @@ function renderCompareTable() {
     html += '<tr class="border-b border-gray-100 ' + rowClass + '">';
     html += '<td class="px-5 py-3.5 text-sm font-medium text-gray-500 sticky left-0 ' + (idx % 2 === 0 ? 'bg-white' : 'bg-gray-50') + '">' + __(sk.labelKey) + '</td>';
     products.forEach(function (p) {
+      if (p.hidden) return;
       var val = p[sk.key];
       if (sk.key === 'cooling' || sk.key === 'psu') {
         val = __(val) || val;
@@ -283,6 +288,7 @@ function populateModelSelect() {
   selects.forEach(function (sel) {
     var html = '<option value="">' + __('formModelPlaceholder') + '</option>';
     products.forEach(function (p) {
+      if (p.hidden) return;
       html += '<option value="' + p.name + '">' + p.name + ' (' + p.tagline + ') — ' + p.price + '</option>';
     });
     sel.innerHTML = html;
