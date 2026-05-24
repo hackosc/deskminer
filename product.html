@@ -84,7 +84,7 @@
             </a>
           </div>
 
-          <p id="buyNowDesc" class="text-sm text-gray-400"></p>
+          <div id="buyNowDesc" class="text-sm text-gray-500 leading-relaxed space-y-3"></div>
         </div>
       </div>
 
@@ -96,26 +96,20 @@
             <tbody></tbody>
           </table>
         </div>
-        <div id="galleryGrid" class="space-y-6"></div>
+        <div id="galleryGrid" class="space-y-4 max-w-2xl mx-auto"></div>
       </div>
 
-      <!-- Description -->
+      <!-- What's in the Box -->
       <div class="mt-16">
-        <h2 class="text-2xl font-bold mb-6" data-i18n="detailDescription">Product Description</h2>
-        <div class="grid sm:grid-cols-2 gap-8">
-          <div class="prose prose-gray max-w-none">
-            <p id="detailDescP1" class="text-gray-600 leading-relaxed"></p>
-            <p id="detailDescP2" class="text-gray-600 leading-relaxed mt-4"></p>
-          </div>
-          <div class="bg-gray-50 rounded-2xl p-6">
-            <h3 class="font-semibold mb-4" data-i18n="detailInBox">What's in the Box</h3>
-            <ul id="boxItems" class="space-y-2 text-sm text-gray-600"></ul>
-            <hr class="my-4 border-gray-200" />
-            <div class="flex items-center gap-2 text-sm text-brand-600 font-medium">
-              <i class="fa-solid fa-shield-halved"></i> <span data-i18n="detailWarranty">12-month warranty</span>
-            </div>
+        <h2 class="text-2xl font-bold mb-6" data-i18n="detailInBox">What's in the Box</h2>
+        <div class="bg-gray-50 rounded-2xl p-6">
+          <ul id="boxItems" class="space-y-2 text-sm text-gray-600"></ul>
+          <hr class="my-4 border-gray-200" />
+          <div class="flex items-center gap-2 text-sm text-brand-600 font-medium">
+            <i class="fa-solid fa-shield-halved"></i> <span data-i18n="detailWarranty">12-month warranty</span>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -173,10 +167,17 @@
       document.getElementById('productHashrate').textContent = prod.hashrate;
       document.getElementById('productSub').textContent = prod.power + ' · ' + prod.efficiency;
       document.getElementById('productPrice').textContent = prod.price;
-      document.getElementById('buyNowDesc').innerHTML = __('buyNowDesc', { s: prod.name });
-      document.getElementById('detailDescP1').innerHTML = __('detailDescP1', { s: prod.name, c: prod.chip });
-      document.getElementById('detailDescP2').innerHTML = __('detailDescP2');
-
+      var descHtml = '';
+      if (prod.desc) descHtml += '<p>' + prod.desc + '</p>';
+      if (prod.shipping) descHtml += '<p class=\"font-medium text-gray-700\">' + prod.shipping + '</p>';
+      if (prod.highlights && prod.highlights.length) {
+        descHtml += '<ul class=\"space-y-1 mt-3\">';
+        prod.highlights.forEach(function (h) {
+          descHtml += '<li class=\"flex items-start gap-2\"><i class=\"fa-solid fa-circle-check text-green-500 text-xs mt-1\"></i><span>' + h + '</span></li>';
+        });
+        descHtml += '</ul>';
+      }
+      document.getElementById('buyNowDesc').innerHTML = descHtml || __('buyNowDesc', { s: prod.name });
       if (prod.badge && badgeMap[prod.badge]) {
         var badge = document.getElementById('productBadge');
         badge.textContent = __(badgeMap[prod.badge]);
@@ -218,7 +219,7 @@
         var html = '';
         prod.gallery.forEach(function (img, i) {
           html +=
-            '<img src="' + img + '" alt="' + prod.name + ' photo ' + (i+1) + '" class="w-full rounded-2xl border border-gray-200" />';
+            '<img src="' + img + '" alt="' + prod.name + ' photo ' + (i+1) + '" class="w-full rounded-xl border border-gray-200" />';
         });
         grid.innerHTML = html;
       }
@@ -227,9 +228,17 @@
       function updatePageText() {
         document.title = __('detailTitle', { s: prod.name });
         document.getElementById('productTagline').textContent = __(prod.id.charAt(0).toUpperCase() + prod.id.slice(1));
-        document.getElementById('buyNowDesc').innerHTML = __('buyNowDesc', { s: prod.name });
-        document.getElementById('detailDescP1').innerHTML = __('detailDescP1', { s: prod.name, c: prod.chip });
-        document.getElementById('detailDescP2').innerHTML = __('detailDescP2');
+        var descHtml = '';
+      if (prod.desc) descHtml += '<p>' + prod.desc + '</p>';
+      if (prod.shipping) descHtml += '<p class=\"font-medium text-gray-700\">' + prod.shipping + '</p>';
+      if (prod.highlights && prod.highlights.length) {
+        descHtml += '<ul class=\"space-y-1 mt-3\">';
+        prod.highlights.forEach(function (h) {
+          descHtml += '<li class=\"flex items-start gap-2\"><i class=\"fa-solid fa-circle-check text-green-500 text-xs mt-1\"></i><span>' + h + '</span></li>';
+        });
+        descHtml += '</ul>';
+      }
+      document.getElementById('buyNowDesc').innerHTML = descHtml || __('buyNowDesc', { s: prod.name });
         if (prod.badge && badgeMap[prod.badge]) {
           document.getElementById('productBadge').textContent = __(badgeMap[prod.badge]);
         }

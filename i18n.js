@@ -101,7 +101,7 @@
       'Nerdoctaxe12': 'Rev 3.1 — 12 TH/s',
       'Nerdoctaxe15': 'Rev 3.1 — 15 TH/s',
       'Nexusl1': '320 MH/s Scrypt Miner',
-      'Nexuss1': '10.3 TH/s',
+      'Nexuss1': 'Solo Mining ASIC — PSU Included',
       langSwitch: '中文',
       langSwitchTitle: 'Switch to Chinese'
     },
@@ -204,7 +204,7 @@
       'Nerdoctaxe12': 'Rev 3.1 — 12 TH/s',
       'Nerdoctaxe15': 'Rev 3.1 — 15 TH/s',
       'Nexusl1': '320 MH/s Scrypt 矿机',
-      'Nexuss1': '10.3 TH/s',
+      'Nexuss1': 'Solo 挖矿 ASIC — 含电源',
       'Cooling 1100RPM Ultra-Quiet Fan': '1100RPM 超静音风扇',
       'Cooling 2600RPM Fan': '2600RPM 风扇',
       'Cooling 2500RPM Fan': '2500RPM 风扇',

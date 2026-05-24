@@ -128,23 +128,31 @@ var products = [
   {
     id: 'nexuss1',
     name: 'Nexus Miner S1',
-    tagline: '10.3 TH/s',
-    chip: '8×BM1370',
+    tagline: 'Solo Mining ASIC — PSU Included',
+    chip: '4×BM1373',
     hashrate: '10.3 TH/s',
-    power: '200W ±10%',
-    efficiency: '19.4 J/TH',
-    noise: '<45 dB',
-    size: '200 × 150 × 180 mm',
+    power: '103W ±10%',
+    efficiency: '10 J/TH',
+    noise: '<50dB',
+    size: '170 × 160 × 105 mm',
     weight: '~900g',
-    cooling: 'Cooling Dual Fan System',
-    psu: 'PSU 12VDC (Included)',
+    cooling: 'Cooling 2600RPM Fan',
+    psu: 'PSU XT30 12VDC (Included)',
     price: '$780',
     featured: false,
     badge: null,
     img: 'images/nexuss1.png',
     algo: 'SHA-256 (BTC/BCH/BSV)',
     warranty: '6 months',
-    gallery: ['images/nexuss1_1.png']
+    gallery: ['images/nexuss1_1.png','images/nexuss1_2.png','images/nexuss1_3.png','images/nexuss1_4.png','images/nexuss1_5.png','images/nexuss1_6.png'],
+    desc: 'Compact ASIC miner built for home and solo mining. Powered by four next-gen BM1373 chips, delivering ~10.3 TH/s at just ~103W — an outstanding ~10 J/TH efficiency. Supports BTC, BCH, and BSV on the SHA-256 algorithm.',
+    shipping: 'Estimated shipping: end of May 2026.',
+    highlights: [
+      'Built-in ESP32-S3 WiFi for a quick, cable-free setup experience.',
+      'Designed for the home: ultra-quiet cooling, low power draw, true plug-and-play.',
+      'Fully open-source firmware — tweak, tune, and make it your own.',
+      'Backed by a 6-month limited warranty for your peace of mind.'
+    ]
   }
 ];
 
