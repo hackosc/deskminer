@@ -47,7 +47,15 @@ var products = [
     img: 'images/nexusl1.png',
     algo: 'Scrypt (LTC/DOGE/BELLS)',
     warranty: '6 months',
-    gallery: ['images/nexusl1_1.png','images/nexusl1_2.png','images/nexusl1_3.png','images/nexusl1_4.png','images/nexusl1_5.png','images/nexusl1_6.png','images/nexusl1_7.png']
+    gallery: ['images/nexusl1_1.png','images/nexusl1_2.png','images/nexusl1_3.png','images/nexusl1_4.png','images/nexusl1_5.png','images/nexusl1_6.png','images/nexusl1_7.png'],
+    desc: 'Compact Scrypt ASIC miner purpose-built for home solo mining. Four BM1491 chips push ~320 MH/s at a lean ~70W, delivering an exceptional ~4.57 J/MH efficiency. Compatible with LTC, DOGE, and Bells via the Scrypt algorithm.',
+    shipping: 'Estimated shipping: end of May 2026.',
+    highlights: [
+      'Built-in ESP32-S3 WiFi for a quick, cable-free setup experience.',
+      'Designed for the home: ultra-quiet cooling, low power draw, true plug-and-play.',
+      'Fully open-source firmware — tweak, tune, and make it your own.',
+      'Backed by a 6-month limited warranty for your peace of mind.'
+    ]
   },
   {
     id: 'nerdqaxe48',
@@ -68,7 +76,15 @@ var products = [
     img: 'images/nerdqaxe48.png',
     algo: 'SHA-256 (BTC/BCH/BSV)',
     warranty: '6 months',
-    gallery: ['images/nerdqaxe48_1.png','images/nerdqaxe48_2.png','images/nerdqaxe48_3.png']
+    gallery: ['images/nerdqaxe48_1.png','images/nerdqaxe48_2.png','images/nerdqaxe48_3.png'],
+    desc: 'Ultra-quiet high-efficiency solo miner built around four BM1370 chips. Delivers ~4.8 TH/s at just ~68W — an impressive ~15 J/TH efficiency. The 1100RPM fan keeps noise under 30 dB, making it virtually silent and perfect for any room. Runs SHA-256 for BTC, BCH, and BSV.',
+    shipping: 'Estimated shipping: end of May 2026.',
+    highlights: [
+      'Built-in display for real-time hashrate, temperature, and status monitoring.',
+      'Ultra-quiet 1100RPM cooling — rated under 30 dB, ideal for home or office.',
+      'Fully open-source hardware and firmware — customize every aspect.',
+      'Backed by a 6-month limited warranty for your peace of mind.'
+    ]
   },
   {
     id: 'nerdqaxe6',
@@ -77,7 +93,7 @@ var products = [
     chip: '4×BM1370',
     hashrate: '6.0 TH/s',
     power: '123W ±10%',
-    efficiency: '20.6 J/TH',
+    efficiency: '20.57 J/TH',
     noise: '<50 dB',
     size: '170 × 160 × 105 mm',
     weight: '~550g',
@@ -89,7 +105,15 @@ var products = [
     img: 'images/nerdqaxe6.png',
     algo: 'SHA-256 (BTC/BCH/BSV)',
     warranty: '6 months',
-    gallery: ['images/nerdqaxe6_1.png','images/nerdqaxe6_2.png','images/nerdqaxe6_3.png']
+    gallery: ['images/nerdqaxe6_1.png','images/nerdqaxe6_2.png','images/nerdqaxe6_3.png'],
+    desc: 'Compact solo mining workhorse powered by four BM1370 ASIC chips. Pushes ~6.0 TH/s at ~123W for a solid ~20.57 J/TH efficiency. A straightforward, no-fuss choice for SHA-256 mining across BTC, BCH, and BSV.',
+    shipping: 'Estimated shipping: end of May 2026.',
+    highlights: [
+      'Built-in ESP32-S3 WiFi for a quick, cable-free setup experience.',
+      'Space-saving design with efficient 2600RPM cooling, fits any workspace.',
+      'Fully open-source firmware — tweak, tune, and make it your own.',
+      'Backed by a 6-month limited warranty for your peace of mind.'
+    ]
   },
   {
     id: 'nerdqx',
@@ -110,7 +134,15 @@ var products = [
     img: 'images/nerdqx.jpg',
     algo: 'SHA-256 (BTC/BCH/BSV)',
     warranty: '6 months',
-    gallery: ['images/nerdqx_1.jpg','images/nerdqx_2.jpg','images/nerdqx_3.jpg','images/nerdqx_4.jpg','images/nerdqx_5.jpg','images/nerdqx_6.jpg']
+    gallery: ['images/nerdqx_1.jpg','images/nerdqx_2.jpg','images/nerdqx_3.jpg','images/nerdqx_4.jpg','images/nerdqx_5.jpg','images/nerdqx_6.jpg'],
+    desc: 'A sleek solo mining powerhouse running four BM1370 chips. Pushes ~8.1 TH/s while drawing only ~138W, achieving ~17 J/TH efficiency. Features an XT60 interface for reliable power delivery. Fully compatible with BTC, BCH, and BSV on SHA-256.',
+    shipping: 'Estimated shipping: end of May 2026.',
+    highlights: [
+      'Built-in WiFi for fast, hassle-free setup right out of the box.',
+      'XT60 power connector for stable, flexible power supply options.',
+      'Quiet operation in a sleek, modern chassis that looks great anywhere.',
+      'Backed by a 6-month limited warranty for your peace of mind.'
+    ]
   },
   {
     id: 'nerdoctaxe12',
@@ -132,7 +164,15 @@ var products = [
     img: 'images/nerdoctaxe12.jpg',
     algo: 'SHA-256 (BTC/BCH/BSV)',
     warranty: '6 months',
-    gallery: ['images/nerdoctaxe12_1.jpg','images/nerdoctaxe12_2.jpg','images/nerdoctaxe12_3.jpg','images/nerdoctaxe12_4.jpg','images/nerdoctaxe12_5.jpg','images/nerdoctaxe12_6.jpg']
+    gallery: ['images/nerdoctaxe12_1.jpg','images/nerdoctaxe12_2.jpg','images/nerdoctaxe12_3.jpg','images/nerdoctaxe12_4.jpg','images/nerdoctaxe12_5.jpg','images/nerdoctaxe12_6.jpg'],
+    desc: 'Dual-stack powerhouse featuring eight BM1370 chips across two boards. Delivers ~12 TH/s at ~240W for ~20 J/TH efficiency. A quad-fan push-pull cooling system (two front, two rear) keeps temperatures in check. Built for SHA-256 mining on BTC, BCH, and BSV.',
+    shipping: 'Estimated shipping: end of May 2026.',
+    highlights: [
+      'Eight BM1370 chips on a dual-board stack for maximum hash density.',
+      'Quad-fan push-pull cooling — two front, two rear — for optimal airflow.',
+      'Built-in ESP32-S3 WiFi for a quick, cable-free setup experience.',
+      'Backed by a 6-month limited warranty for your peace of mind.'
+    ]
   },
   {
     id: 'nerdoctaxe15',
@@ -154,7 +194,15 @@ var products = [
     img: 'images/nerdoctaxe15.jpg',
     algo: 'SHA-256 (BTC/BCH/BSV)',
     warranty: '6 months',
-    gallery: ['images/nerdoctaxe15_1.jpg','images/nerdoctaxe15_2.jpg','images/nerdoctaxe15_3.jpg','images/nerdoctaxe15_4.jpg','images/nerdoctaxe15_5.jpg','images/nerdoctaxe15_6.jpg']
+    gallery: ['images/nerdoctaxe15_1.jpg','images/nerdoctaxe15_2.jpg','images/nerdoctaxe15_3.jpg','images/nerdoctaxe15_4.jpg','images/nerdoctaxe15_5.jpg','images/nerdoctaxe15_6.jpg'],
+    desc: 'The flagship dual-stack miner, packing eight BM1370 chips across two boards. Pushes ~15 TH/s at ~250W for ~16.7 J/TH efficiency. Quad-fan push-pull cooling handles the thermal load with ease. Designed for SHA-256 mining on BTC, BCH, and BSV.',
+    shipping: 'Estimated shipping: end of May 2026.',
+    highlights: [
+      'Eight BM1370 chips on a dual-board stack for top-tier hashrate output.',
+      'Quad-fan push-pull cooling — two front, two rear — for maximum airflow.',
+      'Built-in ESP32-S3 WiFi for a quick, cable-free setup experience.',
+      'Backed by a 6-month limited warranty for your peace of mind.'
+    ]
   }
 ];
 
