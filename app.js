@@ -414,6 +414,28 @@ function initLangSwitcher() {
   });
 }
 
+function notifyTelegram(data) {
+  if (typeof TG === 'undefined' || !TG.token) {
+    console.log('Form submitted:', data);
+    return Promise.resolve();
+  }
+  var text =
+    '<b>📩 New Inquiry</b>\n' +
+    '<b>Name:</b> ' + escapeHtml(data.name) + '\n' +
+    '<b>Contact:</b> ' + escapeHtml(data.contact) + '\n' +
+    '<b>Model:</b> ' + (data.model || 'Not selected') + '\n' +
+    '<b>Message:</b> ' + (data.message ? escapeHtml(data.message) : '(none)');
+  return fetch('https://api.telegram.org/bot' + TG.token + '/sendMessage', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: TG.chatId, text: text, parse_mode: 'HTML' })
+  });
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 function initForm() {
   var form = document.getElementById('contactForm');
   var success = document.getElementById('formSuccess');
@@ -430,15 +452,26 @@ function initForm() {
       alert(__('formError'));
       return;
     }
-    console.log('Form submitted:', data);
-    form.reset();
-    if (success) {
-      success.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i>' + __('formSuccess');
-      success.classList.remove('hidden');
-      setTimeout(function () {
-        success.classList.add('hidden');
-      }, 5000);
-    }
+    notifyTelegram(data).then(function () {
+      form.reset();
+      if (success) {
+        success.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i>' + __('formSuccess');
+        success.classList.remove('hidden');
+        setTimeout(function () {
+          success.classList.add('hidden');
+        }, 5000);
+      }
+    }).catch(function (err) {
+      console.error('Telegram notify failed:', err);
+      form.reset();
+      if (success) {
+        success.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i>' + __('formSuccess');
+        success.classList.remove('hidden');
+        setTimeout(function () {
+          success.classList.add('hidden');
+        }, 5000);
+      }
+    });
   });
 }
 
