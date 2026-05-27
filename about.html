@@ -69,6 +69,8 @@
         <div class="hidden md:flex items-center gap-6 text-sm font-medium">
           <a href="index.html#products" class="text-gray-600 hover:text-brand-600 transition-colors" data-i18n="navProducts">Products</a>
           <a href="about.html" class="text-brand-600 transition-colors" data-i18n="navAbout">About</a>
+          <a href="index.html#compare" class="text-gray-600 hover:text-brand-600 transition-colors" data-i18n="navCompare">Compare</a>
+          <a href="index.html#why" class="text-gray-600 hover:text-brand-600 transition-colors" data-i18n="navWhy">Why Us</a>
           <a href="index.html#contact" class="text-gray-600 hover:text-brand-600 transition-colors" data-i18n="navContact">Contact</a>
         </div>
         <div class="hidden md:flex items-center gap-3">
@@ -88,6 +90,8 @@
     <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2 space-y-2 text-sm font-medium">
       <a href="index.html#products" class="block py-2 text-gray-600 hover:text-brand-600" data-i18n="navProducts">Products</a>
       <a href="about.html" class="block py-2 text-brand-600 font-semibold" data-i18n="navAbout">About</a>
+      <a href="index.html#compare" class="block py-2 text-gray-600 hover:text-brand-600" data-i18n="navCompare">Compare</a>
+      <a href="index.html#why" class="block py-2 text-gray-600 hover:text-brand-600" data-i18n="navWhy">Why Us</a>
       <a href="index.html#contact" class="block py-2 text-brand-600 font-semibold" data-i18n="navCTA">Get a Quote</a>
     </div>
   </nav>
@@ -464,30 +468,20 @@
   <script src="app.js"></script>
   <script>
     (function () {
-      // Update page meta
+      // app.js renderI18nText() overwrites title & meta desc with site defaults.
+      // We fix them back to about-page values both on load and on lang change.
       var metaDesc = document.querySelector('meta[name="description"]');
-      document.title = __('aboutTitle');
-      if (metaDesc) metaDesc.setAttribute('content', __('aboutMetaDesc'));
 
-      // Render i18n text
-      var elems = document.querySelectorAll('[data-i18n]');
-      elems.forEach(function (el) {
-        var key = el.getAttribute('data-i18n');
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
-        var text = __(key);
-        if (text && text !== key) el.innerHTML = text;
-      });
-
-      window.addEventListener('xclangchange', function () {
-        elems.forEach(function (el) {
-          var key = el.getAttribute('data-i18n');
-          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
-          var text = __(key);
-          if (text && text !== key) el.innerHTML = text;
-        });
+      function fixMeta() {
         document.title = __('aboutTitle');
         if (metaDesc) metaDesc.setAttribute('content', __('aboutMetaDesc'));
-      });
+      }
+
+      // Fix after app.js renderAll() on initial load (runs synchronously before this script)
+      fixMeta();
+
+      // Fix again on every lang change (app.js renderAll dispatches xclangchange)
+      window.addEventListener('xclangchange', fixMeta);
 
       // Navbar scroll
       var navbar = document.getElementById('navbar');
@@ -507,21 +501,6 @@
           a.addEventListener('click', function () { menu.classList.add('hidden'); });
         });
       }
-
-      // Lang switcher
-      var langBtns = document.querySelectorAll('[data-lang-switch]');
-      langBtns.forEach(function (b) {
-        b.addEventListener('click', function () {
-          setLang(getLang() === 'en' ? 'zh' : 'en');
-        });
-      });
-
-      function updateLangBtn() {
-        var lang = getLang();
-        langBtns.forEach(function (b) { b.innerHTML = lang === 'en' ? '中文' : 'EN'; });
-      }
-      updateLangBtn();
-      window.addEventListener('xclangchange', updateLangBtn);
     })();
   </script>
 </body>
