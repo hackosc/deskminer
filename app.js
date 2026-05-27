@@ -1,3 +1,4 @@
+/* Copyright (c) 2025-2026 XC Miner. All rights reserved. See LICENSE. */
 var products = [
   {
     id: 'nexuss1',
@@ -14,7 +15,7 @@ var products = [
     psu: 'PSU XT30 12VDC (Included)',
     price: '$780',
     featured: false,
-    badge: null,
+    badge: 'limited',
     img: 'images/nexuss1.png',
     algo: 'SHA-256 (BTC/BCH/BSV)',
     warranty: '6 months',
@@ -249,7 +250,7 @@ function renderProducts() {
       '<a href="product.html?id=' + p.id + '" class="product-card bg-white rounded-2xl border border-gray-200 overflow-hidden relative flex flex-col group cursor-pointer">' +
         badgeHtml +
         '<div class="relative overflow-hidden bg-gray-100 h-52 flex items-center justify-center">' +
-          '<img src="' + p.img + '" alt="' + p.name + '" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />' +
+          '<img src="' + p.img + '" alt="' + p.name + ' — Desktop ASIC Miner by XC Miner" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />' +
         '</div>' +
         '<div class="p-5 flex-1">' +
           '<div class="flex items-center justify-between mb-3">' +

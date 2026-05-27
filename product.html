@@ -1,9 +1,73 @@
 <!DOCTYPE html>
+<!-- Copyright (c) 2025-2026 XC Miner. All rights reserved. See LICENSE. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product — XC Miner</title>
+  <title>Nexus Miner S1 — Desktop Bitcoin Miner | 10.3 TH/s BM1373 | XC Miner</title>
+  <meta name="description" content="XC Miner desktop Bitcoin miner powered by BM1373 ASIC chips. 10.3 TH/s at 103W with open-source firmware. Whisper-quiet, plug and play. Buy the Nexus Miner S1 today." />
+  <meta name="keywords" content="Nexus Miner, BM1373, desktop bitcoin miner, ASIC miner, solo mining, home mining rig, BM1370, BM1491, NerdQaxe, NerdQX, silent miner, open source miner, crypto mining" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://xcminer.github.io/xcweb/product.html" />
+  <link rel="alternate" hreflang="en" href="https://xcminer.github.io/xcweb/product.html" />
+  <link rel="alternate" hreflang="zh" href="https://xcminer.github.io/xcweb/product.html?lang=zh" />
+  <link rel="alternate" hreflang="x-default" href="https://xcminer.github.io/xcweb/product.html" />
+  <meta property="og:title" content="Nexus Miner S1 — Desktop Bitcoin Miner | 10.3 TH/s BM1373 | XC Miner" />
+  <meta property="og:description" content="Desktop Bitcoin miner powered by 4×BM1373 ASIC chips. 10.3 TH/s at 103W. Open-source firmware, whisper-quiet cooling. Shop the Nexus Miner at XC Miner." />
+  <meta property="og:type" content="product" />
+  <meta property="og:url" content="https://xcminer.github.io/xcweb/product.html?id=nexuss1" />
+  <meta property="og:image" content="https://xcminer.github.io/xcweb/images/nexuss1.png" />
+  <meta property="og:image:alt" content="Nexus Miner S1 — Desktop Bitcoin Miner by XC Miner" />
+  <meta property="og:site_name" content="XC Miner" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nexus Miner S1 — Desktop Bitcoin Miner | 10.3 TH/s BM1373" />
+  <meta name="twitter:description" content="Desktop Bitcoin miner: 4×BM1373 chips, 10.3 TH/s, 103W. Open-source, whisper-quiet. Shop now." />
+  <meta name="twitter:image" content="https://xcminer.github.io/xcweb/images/nexuss1.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Nexus Miner S1",
+    "description": "Desktop Bitcoin miner powered by 4×BM1373 ASIC chips. Delivers 10.3 TH/s at 103W with ~10 J/TH efficiency. Open-source firmware, whisper-quiet cooling, plug and play.",
+    "sku": "NEXUS-S1",
+    "brand": { "@type": "Brand", "name": "XC Miner" },
+    "image": "https://xcminer.github.io/xcweb/images/nexuss1.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "780",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2026-12-31"
+    },
+    "category": "Electronics > Crypto Mining Hardware"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "XC Miner",
+        "item": "https://xcminer.github.io/xcweb/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://xcminer.github.io/xcweb/#products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Nexus Miner S1",
+        "item": "https://xcminer.github.io/xcweb/product.html?id=nexuss1"
+      }
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
@@ -160,14 +224,56 @@
 
       var badgeMap = { hot: 'badgeHot', 'new': 'badgeNew', limited: 'badgeLimited' };
 
-      document.title = __('detailTitle', { s: prod.name });
+      document.title = prod.name + ' — Desktop Bitcoin Miner | ' + prod.hashrate + ' | XC Miner';
       document.getElementById('productImg').src = prod.img;
-      document.getElementById('productImg').alt = prod.name;
+      document.getElementById('productImg').alt = prod.name + ' — Desktop ASIC Miner by XC Miner';
       document.getElementById('productName').textContent = prod.name;
       document.getElementById('productTagline').textContent = __(prod.id.charAt(0).toUpperCase() + prod.id.slice(1));
       document.getElementById('productHashrate').textContent = prod.hashrate;
       document.getElementById('productSub').textContent = prod.power + ' · ' + prod.efficiency;
       document.getElementById('productPrice').textContent = prod.price;
+
+      // Update meta tags for SEO
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', prod.name + ' — Desktop ASIC miner. ' + prod.chip + ' chips, ' + prod.hashrate + ' at ' + prod.power + '. ' + prod.desc);
+      var ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', prod.name + ' — Desktop Bitcoin Miner | ' + prod.hashrate + ' | XC Miner');
+      var ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', prod.name + ': ' + prod.chip + ' chips, ' + prod.hashrate + ' at ' + prod.power + '. ' + (prod.tagline || ''));
+      var ogImg = document.querySelector('meta[property="og:image"]');
+      if (ogImg) ogImg.setAttribute('content', window.location.origin + window.location.pathname.replace('product.html', '') + prod.img);
+      var ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute('content', 'https://xcminer.github.io/xcweb/product.html?id=' + prod.id);
+      var twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twTitle) twTitle.setAttribute('content', prod.name + ' — Desktop Bitcoin Miner | ' + prod.hashrate);
+      var twDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twDesc) twDesc.setAttribute('content', prod.name + ': ' + prod.chip + ', ' + prod.hashrate + '. Open-source, whisper-quiet.');
+      var twImg = document.querySelector('meta[name="twitter:image"]');
+      if (twImg) twImg.setAttribute('content', window.location.origin + window.location.pathname.replace('product.html', '') + prod.img);
+      var canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute('href', 'https://xcminer.github.io/xcweb/product.html?id=' + prod.id);
+
+      // Update Product schema
+      var schemas = document.querySelectorAll('script[type="application/ld+json"]');
+      schemas.forEach(function (s) {
+        try {
+          var data = JSON.parse(s.textContent);
+          if (data['@type'] === 'Product') {
+            data.name = prod.name;
+            data.description = prod.desc || prod.name + ' — Desktop ASIC miner. ' + prod.chip + ', ' + prod.hashrate + ' at ' + prod.power + '.';
+            data.sku = prod.id.toUpperCase();
+            data.image = window.location.origin + window.location.pathname.replace('product.html', '') + prod.img;
+            data.offers.price = prod.price.replace('$', '');
+            s.textContent = JSON.stringify(data);
+          }
+          if (data['@type'] === 'BreadcrumbList') {
+            data.itemListElement[2].name = prod.name;
+            data.itemListElement[2].item = 'https://xcminer.github.io/xcweb/product.html?id=' + prod.id;
+            s.textContent = JSON.stringify(data);
+          }
+        } catch (e) {}
+      });
+
       var descHtml = '';
       if (prod.desc) descHtml += '<p>' + prod.desc + '</p>';
       if (prod.shipping) descHtml += '<p class=\"font-medium text-gray-700\">' + prod.shipping + '</p>';
@@ -227,7 +333,7 @@
       renderGallery(prod);
 
       function updatePageText() {
-        document.title = __('detailTitle', { s: prod.name });
+        document.title = prod.name + ' — Desktop Bitcoin Miner | ' + prod.hashrate + ' | XC Miner';
         document.getElementById('productTagline').textContent = __(prod.id.charAt(0).toUpperCase() + prod.id.slice(1));
         var descHtml = '';
       if (prod.desc) descHtml += '<p>' + prod.desc + '</p>';

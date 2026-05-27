@@ -1,23 +1,58 @@
-# XC Miner
+# XC Miner — Desktop Bitcoin Miners
 
-XC Miner specializes in high-performance desktop silent ASIC Bitcoin miners. All products feature open-source firmware, silent cooling, and plug-and-play setup.
+XC Miner builds high-performance desktop silent ASIC miners for Bitcoin and Scrypt mining. All products feature open-source firmware (ESP32-based, AxeOS compatible), silent cooling, and plug-and-play setup. The flagship Nexus Miner series is powered by next-gen BM1373 and BM1491 ASIC chips.
 
 ## Products
-- XC Nano: $49, 500 GH/s, 15W, BM1366 chip, ultra-portable USB-C powered
-- XC One: $89, 1.2 TH/s, 22W, BM1368 chip, best value
-- XC Pro: $169, 2.8 TH/s, 55W, BM1370 chip, performance tier
-- XC Ultra: $289, 5.5 TH/s, 105W, BM1372 ×1 chip, flagship
-- XC Max: $499, 11 TH/s, 210W, BM1372 ×2 chip, dual-chip beast
+
+### Nexus Miner S1 — $780
+- Chip: 4×BM1373
+- Hashrate: 10.3 TH/s
+- Power: 103W ±10%
+- Efficiency: 10 J/TH
+- Algorithm: SHA-256 (BTC/BCH/BSV)
+- Noise: <50dB
+- Link: https://xcminer.github.io/xcweb/product.html?id=nexuss1
+
+### Nexus Miner L1 — $499
+- Chip: 4×BM1491
+- Hashrate: 320 MH/s
+- Power: 70W ±10%
+- Efficiency: 4.57 J/MH
+- Algorithm: Scrypt (LTC/DOGE/BELLS)
+- Noise: <50dB
+- Link: https://xcminer.github.io/xcweb/product.html?id=nexusl1
+
+### NerdQaxe++ (4.8 TH/s) — $310
+- Chip: 4×BM1370
+- Hashrate: 4.8 TH/s
+- Power: 68W ±10%
+- Efficiency: 15 J/TH
+- Noise: <30dB
+- Link: https://xcminer.github.io/xcweb/product.html?id=nerdqaxe48
+
+### NerdQaxe++ Rev 6.1 (6.0 TH/s) — $340
+- Chip: 4×BM1370
+- Hashrate: 6.0 TH/s
+- Power: 123W ±10%
+- Efficiency: 20.57 J/TH
+- Link: https://xcminer.github.io/xcweb/product.html?id=nerdqaxe6
+
+### NerdQX — $500
+- Chip: 4×BM1370
+- Hashrate: 8.1 TH/s
+- Power: 138W ±10%
+- Efficiency: 17 J/TH
+- Link: https://xcminer.github.io/xcweb/product.html?id=nerdqx
 
 ## Key Features
-- Open Source Firmware: ESP32-based, AxeOS compatible, full control over pools/frequency/voltage
-- Whisper-Quiet: All models under 38dB, custom silent fans with intelligent thermal curves
-- Plug & Play: USB-C or DC power, connects via Wi-Fi, no technical background needed
-- Real ASIC Chips: Bitmain BM13 series, up to 40% efficiency improvement over previous generation
+- Open Source Firmware: ESP32-based, AxeOS compatible, full control over pools, frequency, and voltage
+- Whisper-Quiet: All models feature silent fans with intelligent thermal curves — as low as <30dB
+- Plug & Play: USB-C or DC powered, connects via Wi-Fi, no technical background needed
+- Real ASIC Chips: Latest Bitmain BM1373, BM1370, and BM1491 chips for maximum efficiency
+- Solo Mining Ready: Perfect for home solo mining Bitcoin (SHA-256) and Litecoin/Dogecoin (Scrypt)
 
 ## Contact
 - Website: https://xcminer.github.io/xcweb/
-- WeChat: xc_miner_official
+- WhatsApp: +8615629104975
 - Telegram: @xc_miner
-- Email: sales@xcminer.com
 - X/Twitter: @xc_miner
