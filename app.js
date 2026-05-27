@@ -13,7 +13,7 @@ var products = [
     weight: '~900g',
     cooling: 'Cooling 2600RPM Fan',
     psu: 'PSU XT30 12VDC (Included)',
-    price: '$780',
+    price: '$680',
     featured: false,
     badge: 'limited',
     img: 'images/nexuss1.png',

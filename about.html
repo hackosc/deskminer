@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2025-2026 XC Miner. All rights reserved. See LICENSE. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — XC Miner | ASIC Hardware Engineering &amp; System Integration</title>
+  <meta name="description" content="XC Miner bridges ASIC chip design and commercial deployment. We deliver high-performance PCB design, embedded firmware, and full-stack system optimization for Bitcoin mining hardware." />
+  <meta name="keywords" content="ASIC hardware design, ASIC system integration, PCB design, Bitcoin miner manufacturer, firmware development, BM1373, thermal design, mining hardware engineering" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://xcminer.github.io/xcweb/about.html" />
+  <link rel="alternate" hreflang="en" href="https://xcminer.github.io/xcweb/about.html" />
+  <link rel="alternate" hreflang="zh" href="https://xcminer.github.io/xcweb/about.html?lang=zh" />
+  <link rel="alternate" hreflang="x-default" href="https://xcminer.github.io/xcweb/about.html" />
+  <meta property="og:title" content="About XC Miner — ASIC Hardware Engineering &amp; System Integration" />
+  <meta property="og:description" content="We bridge silicon and deployment. Full-stack hardware engineering: PCB design, thermal systems, embedded firmware, and ASIC platform optimization." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xcminer.github.io/xcweb/about.html" />
+  <meta property="og:image" content="https://xcminer.github.io/xcweb/images/nexuss1.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="XC Miner — ASIC Hardware Engineering &amp; System Integration" />
+  <meta name="twitter:description" content="Full-stack ASIC hardware engineering: from PCB design to firmware, from thermal systems to mass production." />
+  <meta name="twitter:image" content="https://xcminer.github.io/xcweb/images/nexuss1.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About XC Miner",
+    "description": "XC Miner is a technology company specializing in high-performance ASIC computing hardware and system-level solutions.",
+    "about": {
+      "@type": "Organization",
+      "name": "XC Miner",
+      "url": "https://xcminer.github.io/xcweb/",
+      "description": "Provider of high-performance, high-reliability computing hardware and system solutions for blockchain and HPC."
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#eef7ff', 100: '#d9edff', 200: '#bce0ff', 300: '#8eccff', 400: '#57aefe', 500: '#3189fb', 600: '#1a6af1', 700: '#1354de', 800: '#1645b4', 900: '#183d8e', 950: '#132756' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
+            <i class="fa-solid fa-microchip text-white text-sm"></i>
+          </div>
+          <span class="text-xl font-bold tracking-tight">XC Miner</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html#products" class="text-gray-600 hover:text-brand-600 transition-colors" data-i18n="navProducts">Products</a>
+          <a href="about.html" class="text-brand-600 transition-colors" data-i18n="navAbout">About</a>
+          <a href="index.html#contact" class="text-gray-600 hover:text-brand-600 transition-colors" data-i18n="navContact">Contact</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <button data-lang-switch class="text-sm font-medium text-gray-500 hover:text-brand-600 transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 cursor-pointer">中文</button>
+          <a href="index.html#contact" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-brand-200 hover:shadow-brand-300">
+            <span data-i18n="navCTA">Get a Quote</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+        <div class="flex md:hidden items-center gap-2">
+          <button data-lang-switch class="text-xs font-medium text-gray-500 hover:text-brand-600 transition-colors px-2 py-1 rounded">中文</button>
+          <button id="mobileMenuBtn" class="text-gray-700 text-xl">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2 space-y-2 text-sm font-medium">
+      <a href="index.html#products" class="block py-2 text-gray-600 hover:text-brand-600" data-i18n="navProducts">Products</a>
+      <a href="about.html" class="block py-2 text-brand-600 font-semibold" data-i18n="navAbout">About</a>
+      <a href="index.html#contact" class="block py-2 text-brand-600 font-semibold" data-i18n="navCTA">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-28 pb-16 sm:pt-40 sm:pb-24 overflow-hidden bg-gray-900">
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-brand-950 opacity-90"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-400/30 text-brand-300 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+          <i class="fa-solid fa-microchip"></i> <span data-i18n="aboutHeroBadge">Engineering-Driven Hardware Company</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-white">
+          <span data-i18n="aboutHeroTitle1">We Bridge Silicon</span><br />
+          <span class="text-brand-400" data-i18n="aboutHeroTitle2">to Commercial Deployment</span>
+        </h1>
+        <p class="text-lg text-gray-400 leading-relaxed mb-8 max-w-2xl" data-i18n="aboutHeroDesc">
+          We transform raw ASIC computing power into stable, efficient, and commercially deployable computing assets. As the critical bridge between chip foundries and end users, we deliver full-stack hardware engineering — from PCB design and thermal systems to embedded firmware and optimization algorithms.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#capabilities" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-7 py-3.5 rounded-full text-base font-semibold transition-all shadow-xl shadow-brand-900/50">
+            <span data-i18n="aboutHeroBtn">Explore Our Capabilities</span> <i class="fa-solid fa-arrow-down text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="relative -mt-12 pb-0">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl p-6 text-center shadow-xl border border-gray-100">
+          <div class="text-3xl font-extrabold text-brand-600">7nm/5nm</div>
+          <div class="text-sm text-gray-500 mt-1" data-i18n="aboutStat1">TSMC Advanced Nodes</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-xl border border-gray-100">
+          <div class="text-3xl font-extrabold text-brand-600">+5%</div>
+          <div class="text-sm text-gray-500 mt-1" data-i18n="aboutStat2">Efficiency Gain via System Design</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-xl border border-gray-100">
+          <div class="text-3xl font-extrabold text-brand-600">100k+</div>
+          <div class="text-sm text-gray-500 mt-1" data-i18n="aboutStat3">Units Deployed Globally</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-xl border border-gray-100">
+          <div class="text-3xl font-extrabold text-brand-600">Full</div>
+          <div class="text-sm text-gray-500 mt-1" data-i18n="aboutStat4">Hardware + Firmware Stack</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Bridge Concept -->
+  <section class="py-20 sm:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand-600 font-semibold text-sm tracking-wide uppercase" data-i18n="aboutBridgeLabel">Our Role</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4" data-i18n="aboutBridgeTitle">The Critical Bridge in the Value Chain</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto" data-i18n="aboutBridgeDesc">We sit at the most critical junction: turning cutting-edge silicon into reliable, optimized, mass-produced computing hardware.</p>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
+        <!-- Chip Design -->
+        <div class="bg-gray-50 rounded-3xl p-8 text-center w-full lg:w-64 border border-gray-200">
+          <div class="w-14 h-14 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-draw-polygon text-gray-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" data-i18n="aboutBridgeLeftTitle">Chip Suppliers</h3>
+          <p class="text-sm text-gray-500" data-i18n="aboutBridgeLeftDesc">Fabless design houses &amp; foundries providing raw ASIC silicon</p>
+        </div>
+        <!-- Arrow -->
+        <div class="flex lg:flex-col items-center gap-2 text-brand-600">
+          <i class="fa-solid fa-chevron-right text-2xl hidden lg:block"></i>
+          <i class="fa-solid fa-chevron-right text-2xl lg:hidden"></i>
+          <span class="text-xs font-semibold text-brand-500 whitespace-nowrap" data-i18n="aboutBridgeArrow">System Integration</span>
+        </div>
+        <!-- XC Miner -->
+        <div class="bg-brand-600 rounded-3xl p-8 text-center w-full lg:w-72 shadow-2xl shadow-brand-200 relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full" data-i18n="aboutBridgeCenterBadge">Our Core</div>
+          <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4 mt-2">
+            <i class="fa-solid fa-microchip text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-white">XC Miner</h3>
+          <p class="text-sm text-brand-100" data-i18n="aboutBridgeCenterDesc">PCB · Thermal · Firmware · Software · Validation · Production</p>
+        </div>
+        <!-- Arrow -->
+        <div class="flex lg:flex-col items-center gap-2 text-brand-600">
+          <i class="fa-solid fa-chevron-right text-2xl hidden lg:block"></i>
+          <i class="fa-solid fa-chevron-right text-2xl lg:hidden"></i>
+          <span class="text-xs font-semibold text-brand-500 whitespace-nowrap" data-i18n="aboutBridgeArrow2">Deployment</span>
+        </div>
+        <!-- End Users -->
+        <div class="bg-gray-50 rounded-3xl p-8 text-center w-full lg:w-64 border border-gray-200">
+          <div class="w-14 h-14 bg-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-server text-gray-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" data-i18n="aboutBridgeRightTitle">End Users</h3>
+          <p class="text-sm text-gray-500" data-i18n="aboutBridgeRightDesc">Enterprise miners, home miners, hosting facilities worldwide</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Capabilities -->
+  <section id="capabilities" class="py-20 sm:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand-600 font-semibold text-sm tracking-wide uppercase" data-i18n="aboutCapLabel">Core Competencies</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4" data-i18n="aboutCapTitle">Full-Stack Hardware Engineering</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto" data-i18n="aboutCapDesc">Our complete in-house capabilities across the hardware-software stack form a powerful competitive moat.</p>
+      </div>
+
+      <!-- Capability 1: PCB -->
+      <div class="grid lg:grid-cols-2 gap-8 mb-20 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">
+            <i class="fa-solid fa-star"></i> <span data-i18n="aboutCap1Badge">Core Advantage</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4" data-i18n="aboutCap1Title">PCB &amp; Hardware System Design</h3>
+          <p class="text-gray-500 mb-6 leading-relaxed" data-i18n="aboutCap1Desc">We deliver complex, high-density, high-speed PCB design and simulation for large-scale ASIC chips (including TSMC 7nm/5nm process nodes). Our designs co-optimize power delivery, signal routing, and thermal dissipation — ensuring stable operation at high frequency and low voltage.</p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-bolt text-green-600 text-xs"></i></div>
+              <div>
+                <div class="text-sm font-semibold" data-i18n="aboutCap1Item1Title">Signal &amp; Power Integrity</div>
+                <div class="text-xs text-gray-500" data-i18n="aboutCap1Item1Desc">Rich SI/PI simulation experience for high-speed traces and multi-rail power delivery networks.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-temperature-low text-brand-600 text-xs"></i></div>
+              <div>
+                <div class="text-sm font-semibold" data-i18n="aboutCap1Item2Title">CFD-Guided Thermal Design</div>
+                <div class="text-xs text-gray-500" data-i18n="aboutCap1Item2Desc">Air channels, heat pipes, vapor chambers &amp; liquid cooling — keeping junction temps in the optimal range to prevent throttling.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-shield-halved text-amber-600 text-xs"></i></div>
+              <div>
+                <div class="text-sm font-semibold" data-i18n="aboutCap1Item3Title">Design for Reliability (DFR)</div>
+                <div class="text-xs text-gray-500" data-i18n="aboutCap1Item3Desc">Thermal stress, vibration &amp; fatigue analysis. Industrial/automotive-grade components for significantly higher MTBF.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 bg-gray-900 rounded-3xl p-8 lg:p-10">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-800 rounded-2xl p-5 text-center">
+              <div class="text-brand-400 text-2xl font-extrabold">7nm/5nm</div>
+              <div class="text-gray-400 text-xs mt-1" data-i18n="aboutCap1Stat1">Process Node Support</div>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-5 text-center">
+              <div class="text-brand-400 text-2xl font-extrabold">20+</div>
+              <div class="text-gray-400 text-xs mt-1" data-i18n="aboutCap1Stat2">PCB Revisions Shipped</div>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-5 text-center">
+              <div class="text-brand-400 text-2xl font-extrabold">&lt;1%</div>
+              <div class="text-gray-400 text-xs mt-1" data-i18n="aboutCap1Stat3">Field Failure Rate</div>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-5 text-center">
+              <div class="text-brand-400 text-2xl font-extrabold">6+</div>
+              <div class="text-gray-400 text-xs mt-1" data-i18n="aboutCap1Stat4">ASIC Platforms Qualified</div>
+            </div>
+          </div>
+          <p class="text-gray-500 text-xs text-center mt-5" data-i18n="aboutCap1StatNote">Mass production proven across multiple ASIC generations</p>
+        </div>
+      </div>
+
+      <!-- Capability 2: Firmware -->
+      <div class="grid lg:grid-cols-2 gap-8 mb-20 items-center">
+        <div class="bg-gradient-to-br from-brand-900 to-gray-900 rounded-3xl p-8 lg:p-10 text-white">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-brand-500/30 rounded-xl flex items-center justify-center">
+              <i class="fa-solid fa-code text-brand-300"></i>
+            </div>
+            <div class="text-sm text-brand-300 font-semibold" data-i18n="aboutCap2Badge">Core Competency</div>
+          </div>
+          <div class="space-y-5">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-microchip text-brand-400 mt-1"></i>
+              <div>
+                <div class="font-semibold text-sm" data-i18n="aboutCap2Item1Title">ASIC Fine-Grained Control</div>
+                <div class="text-gray-400 text-xs mt-0.5" data-i18n="aboutCap2Item1Desc">Chip initialization, hashrate scheduling, dynamic voltage/frequency scaling (DVFS), fault detection &amp; auto-recovery.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-lock text-brand-400 mt-1"></i>
+              <div>
+                <div class="font-semibold text-sm" data-i18n="aboutCap2Item2Title">Platform Security</div>
+                <div class="text-gray-400 text-xs mt-0.5" data-i18n="aboutCap2Item2Desc">Secure boot chain, encrypted firmware, remote attestation — protecting devices from physical and network attacks.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-wave-square text-brand-400 mt-1"></i>
+              <div>
+                <div class="font-semibold text-sm" data-i18n="aboutCap2Item3Title">Algorithm Optimization</div>
+                <div class="text-gray-400 text-xs mt-0.5" data-i18n="aboutCap2Item3Desc">Task scheduling strategies that maximize pool communication efficiency and mining revenue per watt.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-cloud-arrow-up text-brand-400 mt-1"></i>
+              <div>
+                <div class="font-semibold text-sm" data-i18n="aboutCap2Item4Title">Remote Fleet Management</div>
+                <div class="text-gray-400 text-xs mt-0.5" data-i18n="aboutCap2Item4Desc">Full software stack for batch deployment, remote monitoring, OTA upgrades, and diagnostics — minimal ops overhead.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">
+            <i class="fa-solid fa-code"></i> <span data-i18n="aboutCap2Badge2">Invisible Foundation</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4" data-i18n="aboutCap2Title">Firmware &amp; Embedded Software</h3>
+          <p class="text-gray-500 mb-6 leading-relaxed" data-i18n="aboutCap2Desc">We develop device-level firmware in-house, achieving meticulous control over every aspect of third-party ASIC chips. This includes everything from chip bring-up and power management to real-time fault handling — ensuring every watt counts. Our security architecture integrates secure boot, firmware encryption, and remote integrity verification to safeguard both the device and your data.</p>
+          <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+            <div class="flex items-center gap-3 mb-3">
+              <i class="fa-solid fa-circle-check text-green-500"></i>
+              <span class="text-sm font-semibold" data-i18n="aboutCap2Check1">In-house firmware, not outsourced — full IP ownership</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-green-500"></i>
+              <span class="text-sm font-semibold" data-i18n="aboutCap2Check2">Continuous optimization via fleet-wide telemetry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Capability 3: Value to Chip Partners -->
+      <div class="bg-white rounded-3xl border border-gray-200 p-8 sm:p-12">
+        <div class="text-center mb-10">
+          <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">
+            <i class="fa-solid fa-handshake"></i> <span data-i18n="aboutCap3Badge">Ecosystem Role</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-3" data-i18n="aboutCap3Title">The Partner Chip Designers Depend On</h3>
+          <p class="text-gray-500 max-w-2xl mx-auto" data-i18n="aboutCap3Desc">We are the most important value-realization partner for fabless chip companies — closing the loop from silicon to deployment.</p>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-lightbulb text-brand-600 text-lg"></i>
+            </div>
+            <h4 class="font-bold mb-2" data-i18n="aboutCap3Item1Title">Demand-Side Feedback</h4>
+            <p class="text-sm text-gray-500" data-i18n="aboutCap3Item1Desc">We feed first-hand requirements on power, thermals, interfaces, and reliability back to chip designers — shaping the next generation.</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-flask text-brand-600 text-lg"></i>
+            </div>
+            <h4 class="font-bold mb-2" data-i18n="aboutCap3Item2Title">System-Level Validation</h4>
+            <p class="text-sm text-gray-500" data-i18n="aboutCap3Item2Desc">We provide a complete system validation platform — testing stability and boundaries under real-world operating conditions.</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-chart-line text-brand-600 text-lg"></i>
+            </div>
+            <h4 class="font-bold mb-2" data-i18n="aboutCap3Item3Title">Value Amplification</h4>
+            <p class="text-sm text-gray-500" data-i18n="aboutCap3Item3Desc">Our system-level design typically unlocks 5-10% additional chip efficiency — directly amplifying market competitiveness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Track Record -->
+  <section class="py-20 sm:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand-600 font-semibold text-sm tracking-wide uppercase" data-i18n="aboutTrackLabel">Track Record</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4" data-i18n="aboutTrackTitle">Proven Delivery, Trusted by Industry Leaders</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto" data-i18n="aboutTrackDesc">From enterprise-scale miners to boutique desktop units — every product we ship is an industry first.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Marathon -->
+        <div class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-6 transition-all duration-300 border border-gray-100 hover:border-gray-900">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-400/20 transition-colors">
+            <i class="fa-solid fa-building text-amber-600 text-xl group-hover:text-amber-400 transition-colors"></i>
+          </div>
+          <div class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-0.5 rounded-full mb-3" data-i18n="aboutTrack1Badge">Enterprise Scale</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-white transition-colors" data-i18n="aboutTrack1Title">MARATHON Bitcoin Miner</h3>
+          <p class="text-sm text-gray-500 group-hover:text-gray-400 transition-colors" data-i18n="aboutTrack1Desc">Full product design and mass production delivery for one of the world's largest publicly traded Bitcoin mining companies. End-to-end ownership from schematic to shipping.</p>
+        </div>
+
+        <!-- Nexus S1 -->
+        <div class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-6 transition-all duration-300 border border-gray-100 hover:border-gray-900">
+          <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-400/20 transition-colors">
+            <i class="fa-solid fa-microchip text-purple-600 text-xl group-hover:text-purple-400 transition-colors"></i>
+          </div>
+          <div class="inline-block bg-purple-100 text-purple-800 text-xs font-bold px-2.5 py-0.5 rounded-full mb-3" data-i18n="aboutTrack2Badge">World First</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-white transition-colors">Nexus Miner S1</h3>
+          <p class="text-sm text-gray-500 group-hover:text-gray-400 transition-colors" data-i18n="aboutTrack2Desc">First-to-market desktop miner powered by 4×BM1373 ASIC chips. 10.3 TH/s at 103W. Defined a new category of home solo mining hardware.</p>
+        </div>
+
+        <!-- Nexus L1 -->
+        <div class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-6 transition-all duration-300 border border-gray-100 hover:border-gray-900">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-400/20 transition-colors">
+            <i class="fa-solid fa-coins text-blue-600 text-xl group-hover:text-blue-400 transition-colors"></i>
+          </div>
+          <div class="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-0.5 rounded-full mb-3" data-i18n="aboutTrack3Badge">World First</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-white transition-colors">Nexus Miner L1</h3>
+          <p class="text-sm text-gray-500 group-hover:text-gray-400 transition-colors" data-i18n="aboutTrack3Desc">First-to-market desktop Scrypt miner with 4×BM1491 chips. 320 MH/s at 70W. Brought efficient LTC/DOGE solo mining to the desktop.</p>
+        </div>
+
+        <!-- NerdQX -->
+        <div class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-6 transition-all duration-300 border border-gray-100 hover:border-gray-900">
+          <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-400/20 transition-colors">
+            <i class="fa-solid fa-bolt text-green-600 text-xl group-hover:text-green-400 transition-colors"></i>
+          </div>
+          <div class="inline-block bg-green-100 text-green-800 text-xs font-bold px-2.5 py-0.5 rounded-full mb-3" data-i18n="aboutTrack4Badge">Best Seller</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-white transition-colors">NerdQX</h3>
+          <p class="text-sm text-gray-500 group-hover:text-gray-400 transition-colors" data-i18n="aboutTrack4Desc">Flagship 4×BM1370 desktop miner delivering 8.1 TH/s at 138W. Proven design iterated across multiple production batches with strong market demand.</p>
+        </div>
+
+        <!-- NerdQaxe series -->
+        <div class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-6 transition-all duration-300 border border-gray-100 hover:border-gray-900">
+          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-400/20 transition-colors">
+            <i class="fa-solid fa-volume-off text-brand-600 text-xl group-hover:text-brand-400 transition-colors"></i>
+          </div>
+          <div class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-2.5 py-0.5 rounded-full mb-3" data-i18n="aboutTrack5Badge">Ultra-Quiet</div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-white transition-colors">NerdQaxe++ Series</h3>
+          <p class="text-sm text-gray-500 group-hover:text-gray-400 transition-colors" data-i18n="aboutTrack5Desc">Multiple production revisions (4.8 TH/s to 6.0 TH/s). The ultra-quiet 4×BM1370 design with sub-30dB noise set the benchmark for silent home mining.</p>
+        </div>
+
+        <!-- Future -->
+        <div class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-6 transition-all duration-300 border border-gray-100 hover:border-gray-900 flex flex-col items-center justify-center text-center">
+          <div class="w-12 h-12 bg-gray-200 group-hover:bg-gray-700 rounded-xl flex items-center justify-center mb-4 transition-colors">
+            <i class="fa-solid fa-ellipsis text-gray-500 group-hover:text-gray-300 text-xl transition-colors"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-white transition-colors" data-i18n="aboutTrack6Title">And More in the Pipeline</h3>
+          <p class="text-sm text-gray-500 group-hover:text-gray-400 transition-colors" data-i18n="aboutTrack6Desc">Multiple next-gen platforms under development. Stay tuned.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 sm:py-28 bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-i18n="aboutCTATitle">Let's Build the Next Generation Together</h2>
+      <p class="text-gray-400 mb-8 max-w-xl mx-auto" data-i18n="aboutCTADesc">Whether you're a chip vendor seeking a system integration partner, or an enterprise looking for custom mining hardware — we're ready.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="index.html#contact" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-8 py-3.5 rounded-full text-base font-semibold transition-all shadow-xl shadow-brand-900/50">
+          <span data-i18n="aboutCTABtn1">Get in Touch</span> <i class="fa-solid fa-envelope text-xs"></i>
+        </a>
+        <a href="index.html#products" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-3.5 rounded-full text-base font-semibold transition-all">
+          <span data-i18n="aboutCTABtn2">View Products</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2 text-white font-bold text-lg">
+          <div class="w-7 h-7 bg-brand-600 rounded-lg flex items-center justify-center">
+            <i class="fa-solid fa-microchip text-white text-xs"></i>
+          </div>
+          XC Miner
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="index.html#products" class="hover:text-white transition-colors" data-i18n="navProducts">Products</a>
+          <a href="about.html" class="hover:text-white transition-colors" data-i18n="navAbout">About</a>
+          <a href="index.html#contact" class="hover:text-white transition-colors" data-i18n="navContact">Contact</a>
+        </div>
+        <div class="text-xs text-gray-500" data-i18n="footerRights">© 2026 XC Miner. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script>
+    (function () {
+      // Update page meta
+      var metaDesc = document.querySelector('meta[name="description"]');
+      document.title = __('aboutTitle');
+      if (metaDesc) metaDesc.setAttribute('content', __('aboutMetaDesc'));
+
+      // Render i18n text
+      var elems = document.querySelectorAll('[data-i18n]');
+      elems.forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+        var text = __(key);
+        if (text && text !== key) el.innerHTML = text;
+      });
+
+      window.addEventListener('xclangchange', function () {
+        elems.forEach(function (el) {
+          var key = el.getAttribute('data-i18n');
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+          var text = __(key);
+          if (text && text !== key) el.innerHTML = text;
+        });
+        document.title = __('aboutTitle');
+        if (metaDesc) metaDesc.setAttribute('content', __('aboutMetaDesc'));
+      });
+
+      // Navbar scroll
+      var navbar = document.getElementById('navbar');
+      if (navbar) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 20) navbar.classList.add('nav-scrolled');
+          else navbar.classList.remove('nav-scrolled');
+        });
+      }
+
+      // Mobile menu
+      var btn = document.getElementById('mobileMenuBtn');
+      var menu = document.getElementById('mobileMenu');
+      if (btn && menu) {
+        btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
+        menu.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () { menu.classList.add('hidden'); });
+        });
+      }
+
+      // Lang switcher
+      var langBtns = document.querySelectorAll('[data-lang-switch]');
+      langBtns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          setLang(getLang() === 'en' ? 'zh' : 'en');
+        });
+      });
+
+      function updateLangBtn() {
+        var lang = getLang();
+        langBtns.forEach(function (b) { b.innerHTML = lang === 'en' ? '中文' : 'EN'; });
+      }
+      updateLangBtn();
+      window.addEventListener('xclangchange', updateLangBtn);
+    })();
+  </script>
+</body>
+</html>
